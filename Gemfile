@@ -34,6 +34,12 @@ gem 'puma'
 
 gem "twitter-bootstrap-rails"
 
+gem 'devise'
+
+gem 'activeadmin', github: 'activeadmin'
+
+gem 'rack-offline'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
