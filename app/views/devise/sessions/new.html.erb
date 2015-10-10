@@ -1,0 +1,29 @@
+<div class="single-form">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-7">
+            <div class="row">
+              <%= f.label :email, class: 'single-form-label' %>
+              <%= f.email_field :email, autofocus: true, class: 'single-form-input' %>
+            </div>
+
+            <div class="row">
+              <%= f.label :password, class: 'single-form-label' %>
+              <%= f.password_field :password, autocomplete: "off", class: 'single-form-input' %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Log in" %>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <h1 class="single-form-title pull-left">Iniciar</h1>
+          </div>
+        </div>
+
+      </div>
+
+  <% end %>
+</div>
+<%= render "devise/shared/links" %>
