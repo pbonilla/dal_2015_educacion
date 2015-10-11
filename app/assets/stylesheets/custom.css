@@ -197,3 +197,9 @@ span.field{
     color:white;
     margin: 20px;
 }
+
+.course-code{
+    color: white;
+    font-weight: bold;
+    font-size: 200%;
+}

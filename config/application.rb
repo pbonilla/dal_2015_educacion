@@ -26,5 +26,7 @@ module Dal2015Educacion
     config.active_record.raise_in_transactional_callbacks = true
 
     config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
   end
 end

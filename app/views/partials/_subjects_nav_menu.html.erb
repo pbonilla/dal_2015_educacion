@@ -1,11 +1,9 @@
 <% if user_signed_in? %>
-    <% subjects = {sociales: 'Estudios Sociales', espanol:'Español', matematicas:'Matemáticas', ciencias:'Ciencias',
-                   civica: 'Cívica', artes: 'Artes', musica: 'Música', idiomas: 'Idiomas'}.freeze %>
-    <% [:sociales, :espanol, :matematicas, :ciencias, :civica, :artes, :musica, :idiomas].each do |subject| %>
-        <a href="#">
+    <% subjects.keys.each do |subject| %>
+        <%= link_to root_path(subject_id: subject), remote: true do %>
           <div class="<%="gradient gradient-#{subject} text-center" %>">
             <span><%= subjects[subject]%></span>
           </div>
-        </a>
+         <%end %>
     <% end %>
 <% end %>

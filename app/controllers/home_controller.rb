@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def index
     @mode = :local
     @filter = :group
-    @subject = :sociales
+    @subject = params[:subject_id].try(:to_sym) || :sociales
+    @learning_session_form = LearningSessionForm.new
   end
 end
