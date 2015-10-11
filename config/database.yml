@@ -27,4 +27,7 @@ test:
 
 production:
   <<: *default
-  database: dal_2015_production
+  host: ec2-54-197-241-239.compute-1.amazonaws.com
+  database: d8lsml16logkj0
+  user: oumdovpwjoauob
+  password: XwIpACCPG9CfspdE3ZrYAOt0zr
