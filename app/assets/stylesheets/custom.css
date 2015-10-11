@@ -14,7 +14,6 @@ div.single-form{
 
 .single-form-label{
     width: 30%;
-    !important;
 }
 
 input.single-form-input{
@@ -22,7 +21,6 @@ input.single-form-input{
     background-color: #27B8EB;
     border: 1px solid white;
     margin: 2px;
-    !important;
 }
 
 .single-form-title{
@@ -32,7 +30,6 @@ input.single-form-input{
     line-height: 80px;
     vertical-align: middle;
     font-weight: bold;
-    !important;
 }
 
 .margin-bottom-10{
