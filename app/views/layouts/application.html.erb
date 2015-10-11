@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html manifest="/application.manifest">
+<!--<html manifest="/application.manifest">-->
+<html>
 <head>
   <title>Dal2015Educacion</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,8 +16,6 @@
     <% end %>
     <div class="educa-app">
       <%= render partial: "partials/header_partial.html" %>
-      <%= render partial: "partials/subjects_nav_menu.html" %>
-
       <div>
         <%= yield %>
       </div>

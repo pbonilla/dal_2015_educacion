@@ -13,7 +13,11 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
-                    <%= link_to 'Cambiar Datos', edit_user_registration_path, :class => 'navbar-link' %> -
+                    <% if request.path == edit_user_registration_path %>
+                        <%= link_to 'Volver a la aplicación', root_path, :class => 'navbar-link' %> -
+                    <% else %>
+                        <%= link_to 'Cambiar Datos', edit_user_registration_path, :class => 'navbar-link' %> -
+                    <% end %>
                     <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
                   </div>
                 </div>

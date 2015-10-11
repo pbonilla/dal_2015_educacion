@@ -40,6 +40,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'rack-offline'
 
+gem 'pry'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
