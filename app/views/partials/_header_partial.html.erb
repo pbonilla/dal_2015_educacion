@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+    <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-1">
+                <%= image_tag("default_user_photo.png", class: 'img-responsive block-center profile-photo')%>
+            </div>
+            <div class="col-xs-10">
+                <div class="row">
+                    <div class="col-xs-12">
+                      <span class="professor-info"> <%= "Prof: #{current_user.name} / #{current_user.institution}"%></span>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <%= link_to 'Cambiar Datos', edit_user_registration_path, :class => 'navbar-link' %> -
+                    <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+              <%= image_tag("LogoMEP.png", class: 'img-responsive pull-right')%>
+            </div>
+          </div>
+        </div>
+    </div>
+<% end %>

@@ -1,58 +1,51 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1 class="text-center"> WELCOME </h1>
+<% if user_signed_in? %>
+    <div>
+      <div class="row <%="#{@subject.to_s}"%>">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-7 content-section">
+            <div class="row">
+              <div class="col-xs-6">
+                Ver Contenido:
+                <span class="<%= local?(@mode) ? "active" : "" %>">Local</span>
+                /
+                <span class="<%= remote?(@mode) ? "active" : ""%>">En Línea</span>
+              </div>
+              <div class="col-xs-6 pull-right">
+                Organizar por:
+                <span class="<%= filter_by_group?(@filter) ? "active" : "" %>">Grupo</span>
+                /
+                <span class="<%= filter_by_topic?(@filter) ? "active" : "" %>">Tema</span>
+                /
+                <span class="<%= filter_by_type?(@filter) ? "active" : "" %>">Tipo</span>
+                /
+                <span class="<%= filter_by_date?(@filter) ? "active" : "" %>">Fecha</span>
+              </div>
+            </div>
+          <% 3.times do %>
+            <%= render partial: "partials/content_info" %>
+          <% end %>
+        </div>
+        <div class="col-xs-3">
+            <div class="create-group-form">
+              <div class="row">
+                <label>Grupo:</label><br>
+                <input type="text" style="width: 100%">
+              </div>
+              <div class="row">
+                <label>Materia:</label><br>
+                <input type="text" style="width: 100%">
+              </div>
+              <div class="row">
+                <label>Tema:</label><br>
+                <input type="text" style="width: 100%">
+              </div>
+              <div class="row text-center" style="margin-top: 20px">
+                <%= link_to "GENERAR CLAVE", "#" , class: 'btn btn-primary'%>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row text-center">
-    <div class="col-xs-6">
-      <i class="fa fa-apple"></i>
-    </div>
-    <div class="col-xs-6">
-      <i class="fa fa-git"></i>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="table-responsive">
-      <table class="table">
-        <tr class="active">
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-        </tr>
-        <tr class="success">
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-        </tr>
-        <tr class="warning">
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-        </tr>
-        <tr class="danger">
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-        </tr>
-        <tr class="info">
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-          <td> dummy data </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="row custom">
-    asdasdasdasdasdasdas
-  </div>
-</div>
+<% end %>
 
 

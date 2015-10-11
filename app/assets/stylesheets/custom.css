@@ -63,3 +63,137 @@ input.single-form-input{
     font-size: 340%;
     line-height: 100%;
 }
+
+a.custom-link{
+    color: #20419A;
+}
+
+span.professor-info{
+    color: white;
+    font-size: 200%;
+    line-height: 100%;
+}
+
+img.profile-photo{
+    margin: 5px;
+}
+
+.gradient{
+    width: 12.5%;
+    display: inline-block;
+    float: left;
+    line-height: 200px;
+}
+
+.gradient-sociales{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #03080A, #124B5A
+        );
+}
+.gradient-espanol{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #23180A, #f4bb4b
+        );
+}
+.gradient-matematicas{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #140909, #8d4646
+        );
+}
+.gradient-ciencias{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #0f1009, #68804e
+        );
+}
+.gradient-civica{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #0c080c, #544258
+        );
+}
+.gradient-artes{
+    background-image:
+        linear-gradient(
+            to bottom,
+            #130a0f, #895072
+        );
+}
+.gradient-musica{
+    background-image:
+    linear-gradient(
+            to bottom,
+            #060f12, #2a7589
+    );
+}
+.gradient-idiomas{
+    background-image:
+    linear-gradient(
+            to bottom,
+            #050810, #253f6d
+    );
+}
+
+.gradient > span{
+    color: white;
+    font-size: 130%;
+}
+
+.active{
+    color: #20419A;
+}
+
+.content-section{
+    margin-top: 10px;
+    background-color: white
+}
+
+.sociales{
+    background-color: #124B5A;
+}
+.espanol{
+    background-color: #f4bb4b;
+}
+.matematicas{
+    background-color: #8d4646;
+}
+.ciencias{
+    background-color: #68804e;
+}
+.civica{
+    background-color: #544258;
+}
+.artes{
+    background-color: #895072;
+}
+.musica{
+    background-color: #2a7589;
+}
+.idiomas{
+    background-color: #253f6d;
+}
+
+span.field{
+    font-weight: bold;
+}
+
+.bottom-and-right{
+    position:absolute;
+    top: 100px;
+    right:5px;
+    margin:0;
+    padding:5px 3px;
+}
+
+.create-group-form{
+    color:white;
+    margin: 20px;
+}
