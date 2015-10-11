@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010160015) do
+ActiveRecord::Schema.define(version: 20151011154155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,45 @@ ActiveRecord::Schema.define(version: 20151010160015) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "institution_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "groups_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+  end
+
+  add_index "groups_users", ["group_id"], name: "index_groups_users_on_group_id", using: :btree
+  add_index "groups_users", ["user_id"], name: "index_groups_users_on_user_id", using: :btree
+
+  create_table "institutions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "mep_number"
+    t.string   "province"
+    t.string   "canton"
+    t.string   "district"
+    t.string   "village"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "institutions_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "institution_id"
+  end
+
+  add_index "institutions_users", ["institution_id"], name: "index_institutions_users_on_institution_id", using: :btree
+  add_index "institutions_users", ["user_id"], name: "index_institutions_users_on_user_id", using: :btree
+
+  create_table "learning_sessions", force: :cascade do |t|
+    t.string  "key_session"
+    t.integer "group_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

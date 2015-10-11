@@ -42,6 +42,8 @@ gem 'rack-offline'
 
 gem 'pry'
 
+gem 'google-api-client'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
